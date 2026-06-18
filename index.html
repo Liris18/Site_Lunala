@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lunala</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Cabeçalho -->
+<!-- HTML -->
+<div class="topo">
+<img src="img/banneer².png" alt="">
+</div>
+
+
+  <!-- Tela de Login -->
+  <section id="login-section" class="login-container">
+    <div class="login-card">
+      <h2>Login</h2>
+      <input type="email" id="email" placeholder="Digite seu email">
+      <input type="password" id="senha" placeholder="Digite sua senha">
+      <button id="login-btn">Entrar</button>
+      <p id="login-msg"></p>
+    </div>
+  </section>
+
+  <!-- Cards Públicos -->
+  <section id="cards-publicos" class="cards-container">
+    <div class="card">
+     <img src="img/Identidade E7 - 2.png" alt="sobre nós">
+      <h3>Sobre nós</h3>
+      <div class="card-content">
+        <p>Somos uma equipe de 4 estudantes que buscam soluções inovadoras, com o objetivo de ajudar as pessoas.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="img/Lunala Identidade - branca.png" alt="Lunala">
+      <h3>Lunala</h3>
+      <div class="card-content">
+        <p>Um projeto de pesquisa que visa a construção de um filtro para postes de luz, impedindo que plantações de beira de estrada sejam prejudicadas.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="img/filtro.jpeg" alt="Filtro">
+      <h3>Filtro</h3>
+      <div class="card-content">
+        <p>O filtro será verde, pois a cor verde neutraliza o comprimento de ondas vermelho e azul e diminui significativamente os danos.</p>
+      </div>
+    </div>
+    <div class="card">
+  <img src="img/326722147991556035.jpg" alt="">
+  <h3>Compra</h3>
+  <div class="card-content">
+    <p>
+      Para realizão da compra segue:
+    </p>
+    <button onclick="window.location.href='contato.html'">Solicitar Compra</button>
+  </div>
+  </div>
+</div>
+<div class="card">
+  <img src="img/Lunala Identidade - roxa.png" alt="">
+  <h3>Patente e Parcerias</h3>
+  <div class="card-content">
+    <p>
+       Licença e contrato para empresas, com ganho de 5% sobre cada produto vendido com a nossa patente.
+    </p>
+</div>
+</div>
+ <div class="card">
+  <img src="img/Lunala identidade preta.png" alt="">
+
+  <h3>Patrocínio</h3>
+
+  <div class="card-content">
+    <p>Conheça os apoiadores e patrocinadores do projeto.</p>
+
+    <button onclick="abrirPatrocinio()">
+      Ver Patrocinadores
+    </button>
+  </div>
+</div>
+  </section>
+
+  <div id="fundo-patrocinio"></div>
+
+<section id="patrocinio-completo" style="display:none;">
+
+  <button class="fechar-manual" onclick="fecharPatrocinio()">
+    ✕
+  </button>
+
+  <h2>Patrocinadores</h2>
+
+ <div class="patrocinadores-container">
+
+  <div class="logo-card">
+    <img src="img/sinzoopar.jpeg" alt="">
+  </div>
+
+  <div class="logo-card">
+    <img src="img/zootecnia.jpeg" alt="">
+  </div>
+
+  <div class="logo-card">
+    <img src="img/mamis.jpeg" alt="">
+  </div>
+
+  <div class="logo-card">
+    <img src="img/agropan.jpeg" alt="">
+  </div>
+
+</div>
+
+</section>
+
+  <!-- Área logada -->
+<section id="area-logada" style="display:none;">
+
+  <button id="logout-btn" class="logout">Sair</button>
+
+  <!-- Cards Privados -->
+  <div class="cards-container">
+
+    <div class="card">
+  <img src="img/Lunala Identidade - amarela.png" alt="">
+
+  <h3>Suporte e Contato</h3>
+
+  <div class="card-content">
+    <p>Email: equipe7cbjr@gmai.com</p>
+    <p>Instagram:_equipe_07</p>
+
+  </div>
+</div>
+
+    <!-- Card Manual -->
+    <div class="card">
+      <img src="img/661536632803589963.jpg" alt="">
+
+      <h3>Manual de Uso</h3>
+
+      <div class="card-content">
+        <p>Para ver o manual completo com as peças e imagens:</p>
+
+        <button onclick="abrirManual()">
+          Abrir Manual Completo
+        </button>
+      </div>
+    </div>
+
+    <!-- Card Tabela -->
+    <div class="card">
+      <img src="img/form,simple….jpg" alt="">
+
+      <h3>📊 Tabela de Referência</h3>
+
+      <div class="card-content">
+        <p>Consulte a tabela completa de monitoramento.</p>
+
+        <button onclick="abrirTabela()">
+          Abrir Tabela Completa
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- Manual Completo -->
+<div id="fundo-manual"></div>
+
+<section id="manual-completo" style="display:none; padding:30px; max-width:1000px; margin:0 auto;">
+
+  <button class="fechar-manual" onclick="fecharManual()">
+  ✕
+</button>
+
+  <h2>Manual Completo</h2>
+
+  <h3>Filtro e sensor</h3>
+
+  <img src="img/filtro.jpeg" alt="">
+  <p class="descricao-sensor">Filtro com o filtro verde aplicado</p>
+
+  <img src="img/sensor-de-luz-uv-ultravioleta-guva-s12sd.jpg" alt="Senso uvb">
+  <p class="descricao-sensor">Sensor Uv-B</p>
+
+  <h3>Instruções de Uso</h3>
+
+  <ul class="instrucoes">
+  <li>O aplicativo, conectado ao módulo bluetooth, mostrará as informações coletadas pelo sensor.</li>
+  <li>De 20 em 20 segundos os dados serão atualizados em tempo real.</li>
+  <li>Led na cor verde significa funcionamento adequado do filtro.</li>
+  <li>Caso o filtro apresente falhas, o led mudará para o vermelho e o aplicativo mostrará as alterações do recebimento da luz uv-b.</li>
+  <li>Entrar em contato em caso de mal funcionamento ou dúvidas.</li>
+</ul>
+
+  <button onclick="fecharManual()">
+    Fechar Manual
+  </button>
+
+</section>
+
+<!-- Tabela Completa -->
+<section id="tabela-completa" style="display:none; padding:30px; max-width:1000px; margin:0 auto;">
+
+  <h2>Tabelas de Referência</h2>
+
+  <img src="img/Tabelas sites.png" alt="Tabela">
+
+  <button onclick="fecharTabela()">
+    Fechar Tabela
+  </button>
+
+</section>
+
+  <!-- Scripts Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <script src="script.js"></script>
+
+<!-- Scripts -->
+<script src="script.js"></script>
+</body>
+</html>

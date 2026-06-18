@@ -1,0 +1,427 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Cor de fundo */
+body {
+  background-color: #eaf4ead7;
+}
+
+/* Topo / Cabeçalho */
+.topo {
+  width: 100%;
+  height: 220px; /* altura fixa */
+  overflow: hidden;
+}
+
+.topo {
+  width: 100%;
+  height: 220px; /* altura fixa do topo */
+  overflow: hidden;
+  position: relative;
+}
+
+.topo img {
+  width: 100%;             /* largura total */
+  height: 100%;            /* altura do topo */
+  display: block;
+  object-fit: cover;       /* preenche a largura do div */
+  object-position: center 20%; /* corta somente o que sobra embaixo, mantendo o topo visível */
+}
+
+/* Container dos cards */
+.cards-container {
+  margin-top: 310px; /* topo + folga */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+/* Centraliza login */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 340px); /* deixa espaço pro cabeçalho */
+  background: #f3f3f3;
+  padding: 40px 0;
+}
+
+.login-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  width: 420px;
+}
+
+.login-card h2 {
+  margin-bottom: 15px;
+  color: #4d2266;
+}
+
+.login-card input {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.login-card button {
+  width: 100%;
+  padding: 10px;
+  background: #4d2266;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.login-card button:hover {
+  background: #4d2266;
+}
+
+/* Botão logout no canto direito */
+.logout {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #863ce7;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Cards */
+.cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  max-width: 1100px;
+  margin: 30px auto 50px auto;
+  padding: 0 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(20, 80, 20, 0.15);
+  width: 300px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(20, 80, 20, 0.25);
+}
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 18px 18px 0 0;
+}
+
+.card h3 {
+  color: #3d1946;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.card-content {
+  max-height: 0;
+  padding: 0 15px;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+  color: #000000;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.card-content {
+  transition:
+    max-height 0.5s ease,
+    padding 0.5s ease;
+}
+
+.card-content p {
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.card.active .card-content {
+  max-height: 2000px;
+  padding: 20px;
+}
+
+/* Botões dentro dos cards */
+.card-content button {
+  margin-top: 15px;
+  padding: 8px 16px;
+  background-color: #3d1946;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Manual */
+.card-content button:hover {
+  background-color: #3d1946;
+}
+
+#manual-completo,
+#patrocinio-completo {
+  display: none;
+
+  position: fixed;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  width: 80%;
+  max-width: 1100px;
+
+  max-height: 80vh;
+  overflow-y: auto;
+
+  background: white;
+
+  padding: 30px;
+
+  border-radius: 20px;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+
+  z-index: 1000;
+
+animation: abrirManual 2s ease;
+}
+
+.patrocinadores-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.logo-card {
+  width: 480px;
+  height: 220px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 10px;
+
+  background: #f8f8f8;
+  border-radius: 12px;
+}
+
+.logo-card img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+#fundo-manual,
+#fundo-patrocinio {
+  display: none;
+
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0,0,0,0.60);
+
+  z-index: 999;
+}
+
+.instrucoes {
+  margin-top: 20px;
+  padding-left: 25px;
+}
+
+.instrucoes li {
+  margin-bottom: 15px;
+  line-height: 1.8;
+  color: #333;
+}
+
+/* Manual */
+#manual-completo h2, #manual-completo h3 {
+  color: #3d1946;
+  margin-bottom: 10px;
+}
+
+#manual-completo ol {
+  margin-left: 20px;
+  color: #333;
+}
+
+#manual-completo button {
+  background-color: #3d1946;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#manual-completo button:hover {
+  background-color: #3d1946;
+}
+
+.fechar-manual {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+
+  background: none;
+  border: none;
+
+  color: #666;
+
+  font-size: 1.2rem;
+
+  cursor: pointer;
+
+  padding: 2px 6px;
+
+  box-shadow: none;
+}
+
+.fechar-manual {
+  background: none !important;
+  color: #666 !important;
+}
+/* Imagens do manual */
+#manual-completo img {
+  width: 80%;
+  max-width: 500px;
+  border-radius: 10px;
+  margin: 0 auto 15px auto;
+  display: block;
+}
+
+#manual-completo .descricao-sensor {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* Imagem do carrinho */
+#manual-completo img.carrinho {
+  width: 90%;
+  max-width: 600px;
+  display: block;
+  margin: 0 auto 20px auto;
+  border-radius: 10px;
+}
+
+/* Tabelas */
+.bloco.tabelas {
+  max-width: 1100px;
+  margin: 0 auto 50px auto;
+  padding: 30px 40px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(20, 80, 20, 0.15);
+  text-align: center;
+}
+
+.bloco.tabelas h2 {
+  color: #3d1946;
+  margin-bottom: 25px;
+  font-size: 2rem;
+}
+
+.tabelas-container img {
+  max-width: 90%;
+  margin-bottom: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+#tabela-completa button {
+  background: #3d1946;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: block;
+  margin: 30px auto 0 auto;
+  transition: all 0.3s ease;
+}
+
+#tabela-completa button:hover {
+  background: #3d1946;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(34, 102, 34, 0.3);
+}
+/* Responsivo */
+@media (max-width: 960px) {
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  #manual-completo img,
+  #manual-completo img.carrinho,
+  .tabelas-container img {
+    width: 95%;
+  }
+}
+
+@keyframes abrirManual {
+
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+}
